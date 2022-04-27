@@ -22,7 +22,7 @@ public class Account
     {
 
     }
-    public void UpdateAcctBal()
+    public void UpdateAcctBalance()
     {
 
         for (int i = 0; i < Deposits.GetLength(0); i++)
@@ -33,10 +33,12 @@ public class Account
                 if (Deposits[i, j] != 0)
                 {
                     Balance = Deposits[i, j] + Balance;
-
-                    Console.Write($"{i},{j} ");
-
-                    break;
+                    
+                    //No need to write anythng here, any output should be in the ToString function.
+                    //Console.Write($"{i},{j} ");
+                    
+                    // why do you have a break here? This gets out of the For Loop as soon as it processes the first Double digit.
+                    //break;
                 }
             }
 
